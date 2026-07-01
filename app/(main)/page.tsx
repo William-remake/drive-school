@@ -19,8 +19,9 @@ export default function page() {
             className="object-cover object-center w-full h-full scale-105 transition-transform duration-700"
           />
 
-          <div className="absolute inset-0 bg-linear-to-l lg:bg-linear-to-r from-[#0c1620]/80 via-[#0c1620]/40 to-transparent" />
-          <div className="absolute inset-0 bg-linear-to-t from-[#0c1620]/50 via-transparent to-transparent opacity-40" />
+          {/* Thay đổi hướng đổ bóng đậm dần về phía bên phải để làm chữ cực kỳ rõ nét */}
+          <div className="absolute inset-0 bg-linear-to-l from-[#0c1620]/95 via-[#0c1620]/75 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#0c1620]/60 via-transparent to-transparent opacity-50" />
         </div>
 
         {/* 2. KHỐI CHỮ NẰM BÊN PHẢI (CONTENT RIGHT) */}
@@ -28,14 +29,14 @@ export default function page() {
           <div className="w-full lg:max-w-2xl space-y-6 text-center lg:text-right">
 
             {/* Câu Slogan lớn nằm bên phải - Đã tăng size chữ (text-4xl sm:text-5xl lg:text-6xl) */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black uppercase italic tracking-tight leading-tight text-[#f9fafc]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black uppercase italic tracking-tight leading-tight text-[#f9fafc] drop-shadow-md">
               Vững Tay Lái <br />
               <span className="text-[#2962c1] not-italic">Trọn Hành Trình</span>
             </h1>
 
             {/* Tên trường nhỏ nằm ngay phía dưới câu Slogan - Đã tăng size chữ (text-base sm:text-lg) */}
             <div className="flex justify-center lg:justify-end">
-              <p className="text-[#f9fafc]/70 text-base sm:text-lg font-medium tracking-wide max-w-lg uppercase border-b-2 lg:border-b-0 lg:border-r-2 border-[#2962c1] pb-2 lg:pb-0 lg:pr-4 italic">
+              <p className="text-[#f9fafc]/90 text-base sm:text-lg font-medium tracking-wide max-w-lg uppercase border-b-2 lg:border-b-0 lg:border-r-2 border-[#2962c1] pb-2 lg:pb-0 lg:pr-4 italic drop-shadow-sm">
                 — Trung tâm Đào tạo lái xe Đồng Nai
               </p>
             </div>
@@ -175,7 +176,7 @@ export default function page() {
 
               {/* KHỐI TIÊU CHÍ HOẠT ĐỘNG: Nền vàng nhạt nguyên bản, viền trái đổi sang màu xanh dương tạo điểm nhấn hài hòa */}
               <div className="w-full bg-[#fdf5d6] border-l-[5px] border-[#2962c1] p-4 rounded-r text-xs sm:text-sm leading-relaxed text-[#0c1620]/90">
-                Với tiêu chí <strong className="text-black italic">VỮNG TAY LÁI – TRỌN NIỀM TIN</strong>, chúng tôi không ngừng nâng cấp cơ sở vật chất và nâng cao chất lượng đội ngũ giáo viên, qua đó giúp học viên củng cố kiến thức, rèn luyện kỹ năng điều khiển ô tô và tự tin đạt kết quả cao trong kỳ thi sát hạch năm 2026.
+                Với tiêu chí <strong className="text-black italic">VỮNG TAY LÁI – TRỌN NIỀM TIN</strong>, chúng tôi không ngừng nâng cấp cơ sở vật chất and nâng cao chất lượng đội ngũ giáo viên, qua đó giúp học viên củng cố kiến thức, rèn luyện kỹ năng điều khiển ô tô và tự tin đạt kết quả cao trong kỳ thi sát hạch năm 2026.
               </div>
             </div>
           </div>
