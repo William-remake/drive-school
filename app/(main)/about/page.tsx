@@ -154,7 +154,7 @@ export default function page() {
                   Cơ Sở 3
                 </h4>
                 <p className="text-xs sm:text-sm text-[#0c1620]/70 font-medium">
-                  Ấp 4, Xã An Phước, Huyện Long Thành, Đồng Nai
+                   Ấp Suối Cả, Xã Cẩm Mỹ, Tp. Đồng Nai
                 </p>
               </div>
             </div>
