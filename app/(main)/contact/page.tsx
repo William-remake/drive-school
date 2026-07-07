@@ -79,7 +79,7 @@ export default function ContactPage() {
               <div>
                 <span className="block text-xs font-semibold text-[#2962c1] uppercase">Thông tin liên hệ:</span>
                 <div className="text-sm text-gray-700 space-y-0.5">
-                  <p>Phone: 0339 867 945 - 090 310 07 77</p>
+                  <p>Phone: 0339 867 945</p>
                   <p>Zalo: 0339 867 945</p>
                   <p>Email: queanh.daothi@gmail.com</p>
                 </div>
