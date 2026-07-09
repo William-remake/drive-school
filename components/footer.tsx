@@ -1,4 +1,5 @@
 import { FacebookFilled, MailOutlined, PhoneOutlined } from '@ant-design/icons';
+import Image from 'next/image';
 
 export default function Footer() {
     return (
@@ -53,7 +54,8 @@ export default function Footer() {
                 {/* Cột 3: Kết nối mạng xã hội */}
                 <div className="space-y-4">
                     <h3 className="font-bold text-lg uppercase tracking-wide text-[#f9fafc]">Kết nối</h3>
-                    <div className="flex gap-4 text-2xl">
+                    <div className="flex gap-4 text-2xl items-center">
+                        {/* Facebook */}
                         <a
                             href="https://www.facebook.com/p/Trung-t%C3%A2m-%C4%90%C3%A0o-t%E1%BA%A1o-l%C3%A1i-xe-%C4%90%E1%BB%93ng-Nai-100057378553272/?locale=vi_VN"
                             target="_blank"
@@ -61,6 +63,22 @@ export default function Footer() {
                             className="text-[#f9fafc] hover:text-[#2962c1] transition-all duration-300 hover:scale-110"
                         >
                             <FacebookFilled />
+                        </a>
+
+                        {/* Zalo (Đã sửa từ chữ thành Icon Hình ảnh) */}
+                        <a
+                            href="https://zalo.me/339867945" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="transition-all duration-300 hover:scale-110 flex items-center justify-center w-[1.15em] h-[1.15em]"
+                        >
+                            <Image 
+                                src="/Zalo.svg"
+                                alt="Zalo"
+                                width={24}
+                                height={24}
+                                className="w-full h-full object-contain"
+                            />
                         </a>
                     </div>
                 </div>
