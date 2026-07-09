@@ -57,7 +57,7 @@ export default function Footer() {
                     <div className="flex gap-4 text-2xl items-center">
                         {/* Facebook */}
                         <a
-                            href="https://www.facebook.com/p/Trung-t%C3%A2m-%C4%90%C3%A0o-t%E1%BA%A1o-l%C3%A1i-xe-%C4%90%E1%BB%93ng-Nai-100057378553272/?locale=vi_VN"
+                            href="https://www.facebook.com/share/18tPwxuuuv/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#f9fafc] hover:text-[#2962c1] transition-all duration-300 hover:scale-110"
