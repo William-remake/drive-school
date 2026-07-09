@@ -9,9 +9,9 @@ interface Course {
 }
 
 export default function CoursesPage() {
-  // 1. Dữ liệu các hạng đào tạo chia theo 3 nhóm
+  // 1. Dữ liệu các hạng đào tạo chia theo các nhóm phù hợp
 
-  // Nhóm xe máy (Mới bổ sung)
+  // Nhóm xe máy
   const motorbikeCourses: Course[] = [
     { name: "Hạng A1", description: "Điều khiển xe mô tô hai bánh có dung tích xi-lanh đến 125 cm³ hoặc có công suất động cơ điện đến 11 kW.", image: "/xe_so.png" },
     { name: "Hạng A", description: "Điều khiển xe mô tô hai bánh có dung tích xi-lanh trên 125 cm³ và các loại xe quy định cho hạng A1.", image: "/xe_con.png" },
@@ -19,22 +19,27 @@ export default function CoursesPage() {
 
   // Nhóm ô tô con
   const carCourses: Course[] = [
-    { name: "Hạng B1 (Số tự động)", description: "Lái xe số tự động đến 9 chỗ ngồi, không hành nghề lái xe.", image: "/oto_so_tu_dong.png" },
-    { name: "Hạng B2 (Số sàn)", description: "Lái xe số sàn & số tự động đến 9 chỗ, được phép hành nghề lái xe.", image: "/oto_so_san.png" },
+    { name: "Hạng B (Số tự động)", description: "Lái xe số tự động đến 9 chỗ ngồi, xe tải số tự động dưới 3.500 kg, không hành nghề lái xe.", image: "/oto_so_tu_dong.png" },
+    { name: "Hạng B (Số cơ khí)", description: "Lái xe số sàn & số tự động đến 9 chỗ, xe tải dưới 3.500 kg, được phép hành nghề lái xe.", image: "/oto_so_san.png" },
   ];
 
-  // Nhóm xe tải và nâng hạng
+  // Nhóm xe tải & xe khách hành khách (Đã tách xe nâng ra khỏi mảng này)
   const truckAndHeavyCourses: Course[] = [
-    { name: "Hạng C (Xe tải)", description: "Lái xe tải, ô tô chuyên dùng có trọng tải từ 3.500 kg trở lên.", image: "/xe_tai_1.png" },
-    { name: "Hạng D (Dưới 30 chỗ)", description: "Chở người từ 10 đến 30 chỗ ngồi. Yêu cầu đủ tuổi và kinh nghiệm nâng hạng.", image: "/xe_16_cho.png" },
-    { name: "Hạng E (Trên 30 chỗ)", description: "Chở người trên 30 chỗ ngồi. Bản nâng cấp cao cấp cho tài xế chuyên nghiệp.", image: "/xe_30_cho.png" },
-    { name: "Hạng F (Container/Rơ-moóc)", description: "Điều khiển các loại xe kéo rơ-moóc, sơ-mi rơ-moóc, container.", image: "/xe_tai.png" },
+    { name: "Hạng C1", description: "Điều khiển ô tô tải có trọng tải thiết kế từ 3.500 kg đến dưới 7.500 kg.", image: "/xe_tai_1.png" },
+    { name: "Hạng C", description: "Điều khiển ô tô tải, ô tô chuyên dùng có trọng tải thiết kế từ 7.500 kg trở lên.", image: "/xe_tai.png" },
+    { name: "Hạng D1", description: "Điều khiển ô tô chở người từ 10 chỗ đến 16 chỗ ngồi.", image: "/xe_16_cho.png" },
+    { name: "Hạng D2", description: "Điều khiển ô tô chở người trên 16 chỗ đến 30 chỗ ngồi.", image: "/xe_30_cho.png" },
+    { name: "Hạng D", description: "Điều khiển ô tô chở người trên 30 chỗ ngồi.", image: "/tren_30_cho_ngoi.png" }, 
+  ];
+
+  // Nhóm đào tạo nghề riêng biệt
+  const forkliftCourses: Course[] = [
+    { name: "Xe nâng hàng", description: "Khóa học vận hành xe nâng hàng chuyên nghiệp, cấp chứng chỉ nghề có giá trị toàn quốc.", image: "/xe-nâng.png" }, 
   ];
 
   // Reusable Component cho từng Card Hạng Đào Tạo
   const CourseCard = ({ course }: { course: Course }) => (
     <div className="group border border-gray-200 hover:border-[#2962c1] transition-all duration-300 bg-white overflow-hidden rounded-lg shadow-sm">
-      {/* Thay đổi aspect-3/4 sang aspect-video (16:9) để khung ảnh rộng theo chiều ngang */}
       <div className="relative aspect-video overflow-hidden bg-gray-50 p-2">
         <Image
           src={course.image}
@@ -79,7 +84,7 @@ export default function CoursesPage() {
           </div>
         </section>
 
-        {/* SECTION 2: Ô TÔ DƯỚI 9 CHỖ (B1, B2) */}
+        {/* SECTION 2: Ô TÔ CON */}
         <section>
           <div className="flex items-end gap-4 mb-10">
             <h2 className="text-3xl font-black uppercase tracking-tight leading-none text-[#0c1620]">Hạng Ô Tô Con</h2>
@@ -92,14 +97,28 @@ export default function CoursesPage() {
           </div>
         </section>
 
-        {/* SECTION 3: XE TẢI & NÂNG HẠNG CHUYÊN NGHIỆP (C, D, E, F) */}
+        {/* SECTION 3: XE TẢI & XE KHÁCH */}
         <section>
           <div className="flex items-end gap-4 mb-10">
-            <h2 className="text-3xl font-black uppercase tracking-tight leading-none text-[#0c1620]">Xe Tải & Nâng Hạng</h2>
+            <h2 className="text-3xl font-black uppercase tracking-tight leading-none text-[#0c1620]">Xe Tải & Xe Khách</h2>
+            <div className="h-1 grow bg-[#2962c1]/20 mb-1"></div>
+          </div>
+          {/* Đổi sang 3 cột hiển thị cho cân đối khi có 5 phần tử */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {truckAndHeavyCourses.map((course, idx) => (
+              <CourseCard key={idx} course={course} />
+            ))}
+          </div>
+        </section>
+
+        {/* SECTION 4: ĐÀO TẠO LÁI XE NÂNG (Hạng riêng biệt) */}
+        <section>
+          <div className="flex items-end gap-4 mb-10">
+            <h2 className="text-3xl font-black uppercase tracking-tight leading-none text-[#0c1620]">Đào tạo lái xe nâng hàng</h2>
             <div className="h-1 grow bg-[#2962c1] mb-1"></div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {truckAndHeavyCourses.map((course, idx) => (
+          <div className="grid grid-cols-1 max-w-md mx-auto">
+            {forkliftCourses.map((course, idx) => (
               <CourseCard key={idx} course={course} />
             ))}
           </div>

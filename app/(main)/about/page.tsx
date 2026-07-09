@@ -38,7 +38,8 @@ export default function page() {
                 Trung tâm Đào tạo lái xe Đồng Nai
               </p>
               <p>
-                Chuyên đào tạo và sát hạch lái xe với chương trình học bài bản, đội ngũ giáo viên giàu kinh nghiệm cùng hệ thống phương tiện hiện đại. Trung tâm đào tạo các hạng giấy phép lái xe A1, A, A3, A4, B số tự động, B số cơ khí, C1, C, D1, D2, D và đào tạo lái xe nâng hàng, đáp ứng nhu cầu học tập, nâng hạng và phát triển nghề nghiệp của học viên. Với phương châm đào tạo chất lượng, tận tâm và chuyên nghiệp, chúng tôi cam kết mang đến môi trường học tập an toàn, hiệu quả, giúp học viên tự tin chinh phục kỳ thi sát hạch và vững vàng trên mọi hành trình.
+                Chuyên đào tạo và sát hạch lái xe với chương trình học bài bản, đội ngũ giáo viên giàu kinh nghiệm cùng hệ thống phương tiện hiện đại. 
+                Trung tâm đào tạo các hạng giấy phép lái xe A1, A, B số tự động, B số cơ khí, C1, C, D1, D2, D và đào tạo lái xe nâng hàng, đáp ứng nhu cầu học tập, nâng hạng và phát triển nghề nghiệp của học viên. Với phương châm đào tạo chất lượng, tận tâm và chuyên nghiệp, chúng tôi cam kết mang đến môi trường học tập an toàn, hiệu quả, giúp học viên tự tin chinh phục kỳ thi sát hạch và vững vàng trên mọi hành trình.
               </p>
             </div>
 
