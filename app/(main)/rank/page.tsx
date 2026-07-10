@@ -20,7 +20,7 @@ export default function CoursesPage() {
   // Nhóm ô tô con
   const carCourses: Course[] = [
     { name: "Hạng B (Số tự động)", description: "Lái xe số tự động đến 9 chỗ ngồi, xe tải số tự động dưới 3.500 kg, không hành nghề lái xe.", image: "/oto_so_tu_dong.png" },
-    { name: "Hạng B (Số cơ khí)", description: "Lái xe số sàn & số tự động đến 9 chỗ, xe tải dưới 3.500 kg, được phép hành nghề lái xe.", image: "/oto_so_san.png" },
+    { name: "Hạng B (Số sàn)", description: "Lái xe số sàn & số tự động đến 9 chỗ, xe tải dưới 3.500 kg, được phép hành nghề lái xe.", image: "/oto_so_san.png" },
   ];
 
   // Nhóm xe tải & xe khách hành khách (Đã tách xe nâng ra khỏi mảng này)

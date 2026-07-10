@@ -52,54 +52,40 @@ export default function page() {
           {/* Bố cục chia 2 khối lớn cân bằng theo hàng ngang */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
 
-            {/* KHỐI TRÁI: FORM ĐĂNG KÝ HỌC */}
-            <div className="lg:col-span-5 border border-[#2962c1]/30 rounded-2xl p-6 bg-[#f9fafc] flex flex-col justify-between shadow-xs">
-              <div>
-                {/* Đường gạch ngang xuyên qua chữ tiêu đề "Đăng ký học" */}
-                <div className="relative flex justify-center mb-8">
-                  <span className="bg-[#f9fafc] px-4 font-bold text-lg text-[#0c1620] relative z-10">
-                    Đăng ký học
-                  </span>
-                  <div className="absolute top-1/2 left-0 right-0 h-[1.5px] bg-[#2962c1]/20 z-0" />
-                </div>
+            {/* KHỐI TRÁI: HIỂN THỊ MÃ QR ĐĂNG KÝ */}
+            <div className="lg:col-span-5 border border-[#2962c1]/30 rounded-2xl p-6 bg-[#f9fafc] flex flex-col items-center justify-center shadow-xs">
 
-                <form className="space-y-5 text-sm">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <input
-                      type="text"
-                      placeholder="Họ và tên"
-                      className="w-full bg-[#f9fafc] border border-gray-300 rounded px-3 py-2.5 outline-none focus:border-[#2962c1] text-[#0c1620] transition-all"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Số điện thoại"
-                      className="w-full bg-[#f9fafc] border border-gray-300 rounded px-3 py-2.5 outline-none focus:border-[#2962c1] text-[#0c1620] transition-all"
-                    />
-                  </div>
-
-                  <select className="w-full bbg-[#f9fafc] border border-gray-300 rounded px-3 py-2.5 outline-none focus:border-[#2962c1] text-[#0c1620]/70 transition-all">
-                    <option value="">-- Hạng đăng ký --</option>
-                    <option value="a1">Hạng A1 (Xe máy)</option>
-                    <option value="a2">Hạng A2 (Xe mô tô)</option>
-                    <option value="b">Hạng B (Số sàn & Tự động)</option>
-                    <option value="c1">Hạng C1 (Xe tải)</option>
-                  </select>
-
-                  <textarea
-                    rows={5}
-                    placeholder="Nội dung liên hệ"
-                    className="w-full bg-[#f9fafc] border border-gray-300 rounded px-3 py-2.5 outline-none focus:border-[#2962c1] text-[#0c1620] transition-all resize-none"
-                  />
-
-                  {/* Nút bấm Đăng ký đổi sang màu xanh dương chủ đạo */}
-                  <button
-                    type="submit"
-                    className="w-full bg-[#2962c1] hover:bg-[#082379] text-white font-medium py-3 px-4 rounded transition-colors duration-200 text-center text-sm uppercase tracking-wider"
-                  >
-                    Đăng ký
-                  </button>
-                </form>
+              {/* Tiêu đề */}
+              <div className="relative flex justify-center mb-8 w-full">
+                <span className="bg-[#f9fafc] px-4 font-bold text-lg text-[#0c1620] relative z-10 text-center">
+                  Quét mã để đăng ký
+                </span>
+                <div className="absolute top-1/2 left-0 right-0 h-[1.5px] bg-[#2962c1]/20 z-0" />
               </div>
+
+              {/* Khối chứa ảnh QR */}
+              <div className="relative w-48 h-48 sm:w-60 sm:h-60 border-4 border-white shadow-lg rounded-xl overflow-hidden mb-6">
+                <Image
+                  src="/qrcode.png" 
+                  alt="Quét mã QR đăng ký học lái xe"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Lời nhắn phụ */}
+              <p className="text-center text-sm text-gray-600 font-medium px-4">
+                Dùng camera điện thoại quét mã để truy cập form đăng ký nhanh.
+              </p>
+
+              {/* Link dự phòng nếu quét không được */}
+              <a
+                href="https://forms.gle/5hys7DCDEbLP5Es86"
+                target="_blank"
+                className="mt-4 text-[#2962c1] font-bold text-sm hover:underline"
+              >
+                Hoặc nhấn vào đây
+              </a>
             </div>
 
             {/* KHỐI PHẢI: TIÊU ĐỀ XANH DƯƠNG + HÀNG NGANG 4 Ô XE HẠNG ĐÀO TẠO */}
