@@ -16,10 +16,10 @@ export default function page() {
             alt="Học lái xe tại Đồng Nai"
             fill
             priority
-            className="object-cover object-center w-full h-full scale-105 transition-transform duration-700"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1920px"
+            quality={90}
+            className="object-cover object-center w-full h-full transition-transform duration-700"
           />
-
-          {/* Thay đổi hướng đổ bóng đậm dần về phía bên phải để làm chữ cực kỳ rõ nét */}
           <div className="absolute inset-0 bg-linear-to-l from-[#0c1620]/95 via-[#0c1620]/75 to-transparent" />
           <div className="absolute inset-0 bg-linear-to-t from-[#0c1620]/60 via-transparent to-transparent opacity-50" />
         </div>

@@ -6,7 +6,10 @@ export default function ContactPage() {
         {/* CỘT TRÁI: THÔNG TIN LIÊN HỆ CHI TIẾT */}
         <div className="lg:col-span-5 space-y-8">
           <div>
-            <h2 className="text-3xl font-black text-[#0c1620] mb-4 uppercase">Liên hệ</h2>
+            {/* Đã thêm font-sans vào đây để sửa lỗi font chữ tiếng Việt */}
+            <h2 className="text-3xl font-sans font-extrabold text-[#0c1620] mb-4 uppercase tracking-wide">
+              Liên hệ
+            </h2>
             <p className="text-gray-600 leading-relaxed">
               Trung tâm Đào tạo và Sát hạch lái xe Đồng Nai luôn sẵn sàng đồng hành cùng bạn trên mọi hành trình. 
               Liên hệ ngay với chúng tôi để được tư vấn lộ trình học lái xe tốt nhất.
